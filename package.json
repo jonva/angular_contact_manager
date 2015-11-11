@@ -41,6 +41,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "grunt-contrib-imagemin": "^0.9.4",
     "jasmine-core": "^2.3.4"
   }
 }
