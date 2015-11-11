@@ -455,7 +455,7 @@ module.exports = function(grunt) {
             pages: {
                 options: {
                     remote: 'git@github.com:jonva/angular_contact_manager.git',
-                    branch: 'dist'
+                    branch: 'gh-pages'
                 }
             },
             heroku: {
