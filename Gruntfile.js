@@ -17,7 +17,9 @@ module.exports = function(grunt) {
     require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin',
         ngtemplates: 'grunt-angular-templates',
-        cdnify: 'grunt-google-cdn'
+        cdnify: 'grunt-google-cdn',
+        // translate buildcontrol to use the 'grunt-build-control' plugin
+        buildcontrol: 'grunt-build-control'
     });
 
     // Configurable paths for the application
@@ -442,7 +444,6 @@ module.exports = function(grunt) {
                 singleRun: true
             }
         },
-
         //grunt-build-control
         buildcontrol: {
             options: {
@@ -453,13 +454,13 @@ module.exports = function(grunt) {
             },
             pages: {
                 options: {
-                    remote: 'git@github.com:nikjohn/angular_contact_manager.git',
-                    branch: 'master'
+                    remote: 'git@github.com:jonva/angular_contact_manager.git',
+                    branch: 'dist'
                 }
             },
             heroku: {
                 options: {
-                    remote: 'git@github.com:nikjohn/angular_contact_manager.git',
+                    remote: 'git@github.com:jonva/angular_contact_manager.git',
                     branch: 'prod',
                     tag: pkg.version
                 }
