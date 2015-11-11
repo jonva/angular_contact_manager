@@ -461,7 +461,7 @@ module.exports = function(grunt) {
             },
             heroku: {
                 options: {
-                    remote: 'git@heroku.com:address-book-application.git',
+                    remote: 'https://git.heroku.com/address-book-application.git',
                     branch: 'master',
                     tag: pkg.version
                 }
