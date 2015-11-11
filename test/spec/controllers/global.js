@@ -3,7 +3,7 @@
 describe('Controller: GlobalCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('contactmanagerApp'));
+  beforeEach(module('contactManagerApp'));
 
   var GlobalCtrl,
     scope;
@@ -17,7 +17,4 @@ describe('Controller: GlobalCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(GlobalCtrl.awesomeThings.length).toBe(3);
-  });
 });

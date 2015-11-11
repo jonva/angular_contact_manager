@@ -17,6 +17,7 @@ angular.module('contactManagerApp')
             "c_company": "",
             "c_comments": "",
             "c_img_url": "images/dp-grey.svg"
-        }
+        },
+        "DEFAULT_CONTACT_LIST":"/data/defaultContactList.json"
 
     });

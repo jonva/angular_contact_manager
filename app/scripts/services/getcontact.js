@@ -8,10 +8,10 @@
  * Service in the contactManagerApp.
  */
 angular.module('contactManagerApp')
-  .service('getContact', function ($q, $http) {
+  .service('getContact', function ($q, $http, CONSTANTS) {
     this.getContactList = function(){
 	    var deferred = $q.defer();
-	    $http.get('/data/defaultContactList.json').
+	    $http.get(CONSTANTS.DEFAULT_CONTACT_LIST).
 				then(function(data) {
 		        	deferred.resolve(data);
 		    	},function(reason){

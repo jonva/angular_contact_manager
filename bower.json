@@ -13,7 +13,7 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "contactmanagerApp",
+  "moduleName": "contactManagerApp",
   "overrides": {
     "bootstrap": {
       "main": [

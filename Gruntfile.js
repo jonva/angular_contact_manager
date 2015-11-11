@@ -245,7 +245,7 @@ module.exports = function(grunt) {
                 src: [
                     '<%= yeoman.dist %>/scripts/{,*/}*.js',
                     '<%= yeoman.dist %>/styles/{,*/}*.css',
-                    '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                     '<%= yeoman.dist %>/styles/fonts/*'
                 ]
             }
@@ -357,7 +357,7 @@ module.exports = function(grunt) {
         ngtemplates: {
             dist: {
                 options: {
-                    module: 'contactmanagerApp',
+                    module: 'contactManagerApp',
                     htmlmin: '<%= htmlmin.dist.options %>',
                     usemin: 'scripts/scripts.js'
                 },
@@ -400,7 +400,8 @@ module.exports = function(grunt) {
                         '.htaccess',
                         '*.html',
                         'images/{,*/}*.{webp}',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'data/*.json'
                     ]
                 }, {
                     expand: true,
