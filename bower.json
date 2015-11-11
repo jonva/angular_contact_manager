@@ -1,0 +1,26 @@
+{
+  "name": "contactmanager",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.3.0",
+    "bootstrap-sass-official": "^3.2.0",
+    "angular-animate": "^1.3.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.14.3",
+    "normalize-css": "normalize.css#~3.0.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "contactmanagerApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

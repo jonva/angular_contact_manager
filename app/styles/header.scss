@@ -1,0 +1,90 @@
+nav#global-header {
+    padding-left: 0px;
+    padding-right: 0px;
+    div.row {
+        div {
+            a.navbar-brand {
+                background: url('/images/logo.svg') no-repeat center;
+                background-size: contain;
+                width: 150px;
+                margin-left: 15px;
+            }
+        }
+        div#navbar {
+            form {
+                border: none;
+                padding-top: 0px;
+                div {
+                    input {
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                        border-radius: 0px;
+                    }
+                    div {
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                        border-radius: 0px;
+                        button {
+                            background: rgba(41, 128, 185, 1);
+                            border-style: Solid;
+                            border-color: #2980B9;
+                            border-color: rgba(41, 128, 185, 1);
+                            border-width: 1px;
+                            -webkit-border-radius: 0px;
+                            -moz-border-radius: 0px;
+                            border-radius: 0px;
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav.blue-bar {
+    background: #375D81;
+    background: rgba(55, 93, 129, 1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    .add-contact {
+        z-index: 999;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        right: 50px;
+        top: 75px;
+        background: white url('/images/add-icon.svg') no-repeat center;
+        background-size: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        div {
+            div {
+                a.navbar-brand {
+                    margin-left: 15px !important;
+                }
+            }
+            div#navbar {
+                form {
+                    div {
+                        input {}
+                        div {
+                            button {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
