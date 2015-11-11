@@ -460,8 +460,8 @@ module.exports = function(grunt) {
             },
             heroku: {
                 options: {
-                    remote: 'git@github.com:jonva/angular_contact_manager.git',
-                    branch: 'prod',
+                    remote: 'https://git.heroku.com/address-book-application.git',
+                    branch: 'master',
                     tag: pkg.version
                 }
             },
