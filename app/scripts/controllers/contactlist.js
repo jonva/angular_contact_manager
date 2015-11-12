@@ -47,7 +47,7 @@ angular.module('contactManagerApp')
         }, true);
         $scope.deleteContact = function(id) {
             angular.forEach($scope.contactList, function(item, index) {
-                if (id.toLowerCase() === item.c_id.toLowerCase()) {
+                if (id === item.c_id) {
                     $scope.contactList.splice(index, 1);
                 }
             });
