@@ -8,11 +8,9 @@
  * Controller of the contactManagerApp
  */
 angular.module('contactManagerApp')
-    .controller('HomeController', function(getContact, $scope, CONSTANTS, $rootScope) {
-        $scope.searchText = '';
-        angular.isUndefinedOrNull = function(val) {
-            return angular.isUndefined(val) || val === null;
-        };
+    .controller('HomeController', function(getContact, $scope, CONSTANTS, $rootScope, $timeout) {
+        $rootScope.contactModel = CONSTANTS.CONTACT_MODEL;
+        $scope.addSearchText = '';
         $scope.getContactListFromDefaultList = function() {
             //Get promise
             $scope.contactListPrm = getContact.getContactList();
@@ -62,6 +60,7 @@ angular.module('contactManagerApp')
                     angular.forEach(contactParamObject, function(value, key) {
                         contact[key] = value;
                     });
+                    $scope.broadcastMessage("Contact " + contactParamObject.c_name + " updated.");
                 }
             });
             if (!exists) {
@@ -70,9 +69,11 @@ angular.module('contactManagerApp')
                     });
                 
                 $scope.contactList.push(contactParamObject);
+                $scope.broadcastMessage("Contact " + contactParamObject.c_name + " added.");
             }
         };
         $scope.setupEmptyModal = function(){
+            $scope.addSearchText = '';
             $rootScope.contactModel = CONSTANTS.CONTACT_MODEL;
         };
         $scope.setupEditModal = function(nameString){
@@ -88,5 +89,14 @@ angular.module('contactManagerApp')
                     });
                 }
             });
+
+        };
+        $scope.broadcastMessage = function(message, type){
+             $scope.message = message;
+             $scope.messageType = type;
+            $timeout(function(){
+                $scope.message = '';
+                $scope.messageType = '';
+            }, 8000);
         };
     });

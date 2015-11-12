@@ -16,7 +16,9 @@ angular
     ])
 
     .config(function($stateProvider, $urlRouterProvider) {
-    
+    angular.isUndefinedOrNull = function(val) {
+            return angular.isUndefined(val) || val === null;
+        };
     $stateProvider
     
         // route to show our basic form (/form)

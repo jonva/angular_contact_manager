@@ -48,7 +48,18 @@ nav.blue-bar {
     background: #375D81;
     background: rgba(55, 93, 129, 1);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    height: 50px;
+    min-height: 50px;
+    .user-info{
+        background-color: transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        // border: 1px solid rgba(256, 256, 256, 0.2);
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
     .add-contact {
         z-index: 999;
         cursor: pointer;

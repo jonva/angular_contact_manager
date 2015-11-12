@@ -16,4 +16,9 @@ describe('Controller: ContactlistCtrl', function () {
       // place here mocked dependencies
     });
   }));
+
+  it('should have call the getDefaultContactList function', function () {
+    expect(scope.getContactListFromDefaultList).toBe(true);
+  });
+
 });

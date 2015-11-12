@@ -7,6 +7,42 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    height: 1opx;
+    overflow: visible;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 1px 1px 1px 1px;
+    min-height: 28px;
+    padding: 100px 0 0;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     font-family: 'Roboto', sans-serif !important;
@@ -34,7 +70,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
-    padding-top: 100px;
+    padding: 120px 0 0 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 li:focus {
@@ -42,6 +79,87 @@ li:focus {
 }
 
 ul.contact-list {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    li.card-container {
+        padding: 5px;
+        background: #FFFFFF;
+        background: rgba(255, 255, 255, 1);
+        border-style: Solid;
+        border-color: #333745;
+        border-color: rgba(51, 55, 69, 0.1);
+        border-width: 1px;
+        border-bottom: 0px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        div.card-overlay {
+            div {
+                line-height: 50px;
+                height: 50px;
+            }
+            div.dpic-container {
+                margin:15px 0px;
+                text-align: center;
+                line-height: 70px;
+                img.dpic {
+                    height: 70px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    width: auto;
+                }
+                div.dpic-checkbox {}
+            }
+            div.dname-outer-container {
+                
+                span.dname-container {
+                    span.dname {
+                        font-weight: 600;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            div.email-outer-container {
+                border-top: 1px solid rgba(201, 201, 201, 0.2);
+                div.email-container {
+                    div.email {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            div.controls-outer-container {
+                    border-top: 1px solid rgba(201, 201, 201, 0.2);
+                    padding-top: 5px;
+                    min-height: 50px;
+
+                    
+                div.controls-container {
+                    height: 100%;
+                    line-height: 100%;
+                    text-align: center;
+                    span {
+                        line-height: 100%;
+                        height: 100%;
+                        &:hover{
+                            background-color: rgba(201, 201, 201, 0.2);
+                        }
+                    }
+                    span.delete-icon {
+                        background: url('/images/delete-icon.svg') no-repeat center;
+                        background-size: 15px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgba(201, 201, 201, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+    ul.contact-list {
     li.card-container {
         padding: 5px;
         background: #FFFFFF;
@@ -58,6 +176,9 @@ ul.contact-list {
                 height: 30px;
             }
             div.dpic-container {
+                margin: 0px;
+                text-align: center;
+                line-height: 30px;
                 img.dpic {
                     height: 30px;
                     border-radius: 50%;
@@ -67,18 +188,30 @@ ul.contact-list {
                 div.dpic-checkbox {}
             }
             div.dname-outer-container {
+                border: none;
                 span.dname-container {
                     span.dname {
                         font-weight: 600;
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }
             div.email-outer-container {
+                border: none;
                 div.email-container {
-                    div.email {}
+                    div.email {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
             div.controls-outer-container {
+                    border-top: none;
+                    min-height: 30px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    
                 div.controls-container {
                     height: 100%;
                     line-height: 100%;
@@ -86,18 +219,24 @@ ul.contact-list {
                     span {
                         line-height: 100%;
                         height: 100%;
+                        &:hover{
+                            background-color: rgba(201, 201, 201, 0.2);
+                        }
                     }
                     span.delete-icon {
                         background: url('/images/delete-icon.svg') no-repeat center;
                         background-size: 15px;
                         cursor: pointer;
+                        &:hover{
+                            background-color: rgba(201, 201, 201, 0.2);
+                        }
                     }
                 }
             }
         }
     }
 }
-
+}
 div.modal {
     div.modal-dialog {
         position: relative;
@@ -132,7 +271,10 @@ div.modal {
                             }
                             div.dname-outer-container {
                                 span.dname-container {
-                                    span.dname {}
+                                    span.dname {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
                                 }
                             }
                             div.create-icon-container {
