@@ -4,7 +4,7 @@ nav#global-header {
     div.row {
         div {
             a.navbar-brand {
-                background: url('/images/logo.svg') no-repeat center;
+                background: url('../images/logo.svg') no-repeat center;
                 background-size: contain;
                 width: 150px;
                 margin-left: 15px;
@@ -73,7 +73,7 @@ nav.blue-bar {
         position: absolute;
         right: 50px;
         top: 75px;
-        background: white url('/images/add-icon.svg') no-repeat center;
+        background: white url('../images/add-icon.svg') no-repeat center;
         background-size: 30px;
     }
 }

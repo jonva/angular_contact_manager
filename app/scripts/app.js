@@ -15,7 +15,8 @@ angular
         'ui.bootstrap'
     ])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    //$locationProvider.html5Mode(true);
     angular.isUndefinedOrNull = function(val) {
         return angular.isUndefined(val) || val === null;
     };
