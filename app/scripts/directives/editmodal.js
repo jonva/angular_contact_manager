@@ -13,13 +13,9 @@ angular.module('contactManagerApp')
                 replace: true,
                 scope: {
                     datasource: '=',
-                    setupemptymodal: '&',
                     addcontact: '&'
                 },
                 controller: function($scope) {
-                    $scope.setupemptymodalfn = function() {
-                        $scope.setupemptymodal()();
-                    };
                     $scope.addcontactfn = function(contact) {
                         $scope.addcontact()(contact);
                     };

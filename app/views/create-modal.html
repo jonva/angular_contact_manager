@@ -1,6 +1,7 @@
 <div class="modal fade" id="addContactModal" role="dialog">
     <div class="modal-dialog">
         <article class="modal-content">
+            <form name="createContactForm">
             <div class="modal-header">
                 <input ng-model="searchtext" type="text" class="form-control search-bar" placeholder="Enter a name">
             </div>
@@ -8,17 +9,17 @@
                 <ul class="list-unstyled contact-list container-fluid">
                     <li class="card-container row create-contact">
                         <div class="card-overlay">
-                            <div class="dpic-container col-xs-1">
+                            <div class="dpic-container col-sm-1">
                                 <img ng-src="images/dp-grey.svg" alt="New profile photo" class="dpic" title="New profile photo">
                             </div>
-                            <div class="dname-outer-container col-xs-8">
+                            <div class="dname-outer-container  col-sm-8">
                                 <span class="dname-container">
-                                                    <span class="dname" aria-label="searchtext" ng-bind="searchtext">
+                                                    <span class="dname" aria-label="searchtext" ng-bind="searchtext | camelCase">
                                                     </span>
                                 </span>
                             </div>
-                            <div class="create-icon-container col-xs-3">
-                                <button class="create-icon" ng-bind="'Create'" ng-click="setupeditmodalfn(searchtext)" data-dismiss="modal" data-toggle="modal" href="#editContactModel"></button>
+                            <div class="create-icon-container col-sm-3">
+                                <button type="submit" class="create-icon" ng-bind="'Create'" ng-click="setupeditmodalfn(searchtext)" data-dismiss="modal" data-toggle="modal" href="#editContactModel"></button>
                             </div>
                         </div>
                     </li>
@@ -29,15 +30,16 @@
                             </div>
                             <div class="dname-outer-container col-sm-8" ng-click="editcontactfn(contact.c_id)" data-toggle="modal" data-target="#editContactModel" data-dismiss="modal">
                                 <span class="dname-container">
-                                                    <span class="dname" aria-label="{{contact.c_name}}" ng-bind="contact.c_name">
+                                                    <span class="dname" aria-label="{{contact.c_name}}" ng-bind="contact.c_name | camelCase">
                                                     </span>
                                 </span>
                             </div>
-                            <span class="fa edit-icon col-sm-3" ng-click="editcontactfn(contact.c_id)" data-toggle="modal" data-target="#editContactModel" data-dismiss="modal">&nbsp;</span>
+                            <div class="fa edit-icon col-sm-3" ng-click="editcontactfn(contact.c_id)" data-toggle="modal" data-target="#editContactModel" data-dismiss="modal">&nbsp;</div>
                         </div>
                     </li>
                 </ul>
             </div>
+        </form>
         </article>
     </div>
 </div>

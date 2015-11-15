@@ -9,34 +9,34 @@
                     </div>
                     <div class="col-sm-9 col-xs-12 form-container">
                         <div id="field1-container" class="row form-item-container">
-                            <div class="col-xs-12 ">
-                                <input type="text" class="form-control" name="c_name" id="field1" placeholder="Enter Full Name" required="required" ng-model="datasource.c_name">
+                            <div class="col-xs-12" >
+                                <input type="text" class="form-control" ng-class="{ 'has-error' : editContactForm.c_name.$invalid && !editContactForm.name.$pristine }" name="c_name" id="field1" placeholder="Enter Full Name" required="required" ng-model="datasource.c_name">
                                 <i class="glyphicon glyphicon-user"></i>
                             </div>
                         </div>
-                        <div id="field3-container" class="row form-item-container">
+                        <div id="field3-container" class="row form-item-container" >
                             <div class="col-xs-12">
                                 <i class="glyphicon glyphicon-user user-orig"></i>
                                 <i class="glyphicon glyphicon-user user-dupe"></i>
-                                <input type="email" name="c_email" id="field3" placeholder="Enter Email" required="required" ng-model="datasource.c_email">
+                                <input type="email" ng-class="{ 'has-error' : editContactForm.c_email.$invalid && !editContactForm.c_email.$pristine }" name="c_email" id="field3" placeholder="Enter Email" required="required" ng-model="datasource.c_email">
                             </div>
                         </div>
                         <div id="field4-container" class="row form-item-container">
                             <div class="col-xs-12">
                                 <i class="glyphicon glyphicon-envelope"></i>
-                                <input type="text" name="c_nickname" placeholder="Enter Nickname" id="field4" ng-model="datasource.c_nickname">
+                                <input type="text"  ng-class="{ 'has-error' : editContactForm.c_nickname.$invalid && !editContactForm.c_nickname.$pristine }" name="c_nickname" placeholder="Enter Nickname" id="field4" ng-model="datasource.c_nickname">
                             </div>
                         </div>
                         <div id="field5-container" class="row form-item-container">
                             <div class="col-xs-12">
                                 <i class="glyphicon glyphicon-briefcase"></i>
-                                <input type="text" name="c_company" placeholder="Enter Company" id="field5" ng-model="datasource.c_company">
+                                <input type="text"  ng-class="{ 'has-error' : editContactForm.c_company.$invalid && !editContactForm.c_company.$pristine }" name="c_company" placeholder="Enter Company" id="field5" ng-model="datasource.c_company">
                             </div>
                         </div>
                         <div id="field6-container" class="row form-item-container">
                             <div class="col-xs-12">
                                 <i class="glyphicon glyphicon-pencil"></i>
-                                <input type="text" name="c_comments" placeholder="Enter Comments" id="field6" ng-model="datasource.c_comments">
+                                <input type="text"  ng-class="{ 'has-error' : editContactForm.c_comments.$invalid && !editContactForm.c_comments.$pristine }" name="c_comments" placeholder="Enter Comments" id="field6" ng-model="datasource.c_comments">
                             </div>
                         </div>
                         <div id="form-submit" class="row clearfix form-controls-container">

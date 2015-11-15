@@ -2,23 +2,32 @@
 
 describe('Controller: HomeController', function () {
 
+   var HomeController,
+    scope, getContact;
   // load the controller's module
-  beforeEach(module('contactManagerApp'));
+  beforeEach(module('contactManagerApp', function($provide){
+    getContact = jasmine.createSpyObj("getContact", ["getContactList"]);
+    getContact.getContactList.andReturn({
+    name: "Nikhil"
+  });
+    $provide.value("getContact",getContact);
+  }));
 
-  var HomeController,
-    scope;
+  
+ 
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function ($controller, $rootScope, _getContact_) {
     scope = $rootScope.$new();
+    getContact = _getContact_;
     HomeController = $controller('HomeController', {
-      $scope: scope
-      // place here mocked dependencies
+      $scope: scope,
+      getContact: getContact
     });
   }));
 
-  it('default test', function () {
-    expect(true).toBe(true);
+  it('Default contact model to be fetched from constants file', function () {
+    expect(getContact.getContactList).toHaveBeenCalled();
   });
 
 });

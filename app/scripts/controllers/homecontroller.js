@@ -9,7 +9,18 @@
  */
 angular.module('contactManagerApp')
     .controller('HomeController', function(getContact, $scope, CONSTANTS, $rootScope, $timeout) {
-        $rootScope.contactModel = CONSTANTS.CONTACT_MODEL;
+        $scope.contactModel = {};
+        $scope.assignContactModel = function() {
+            $scope.contactModel = {
+                "c_id": "",
+                "c_name": "",
+                "c_email": "",
+                "c_nickname": "",
+                "c_company": "",
+                "c_comments": "",
+                "c_img_url": "images/dp-grey.svg"
+            };
+        };
         $scope.addSearchText = '';
         $scope.getContactListFromDefaultList = function() {
             //Get promise
@@ -30,7 +41,7 @@ angular.module('contactManagerApp')
                 console.log("Did not receive Contact List " + JSON.stringify(reason.statusText));
             });
         };
-        
+
         $scope.generateImageUrl = function() {
             return 'images/dp-' + Math.floor((Math.random() * 3) + 1) + '.svg';
         };
@@ -67,7 +78,7 @@ angular.module('contactManagerApp')
             });
             if (!exists) {
                 angular.forEach(contactParamObject, function(value, key) {
-                    $rootScope.contactModel[key] = value;
+                    $scope.contactModel[key] = value;
                 });
 
                 $scope.contactList.push(contactParamObject);
@@ -76,12 +87,13 @@ angular.module('contactManagerApp')
         };
         $scope.setupEmptyModal = function() {
             $scope.addSearchText = '';
-            $rootScope.contactModel = CONSTANTS.CONTACT_MODEL;
+            $scope.assignContactModel();
         };
         $scope.setupEditModal = function(nameString) {
-            $rootScope.contactModel.c_id = '';
-            $rootScope.contactModel.c_id = Math.floor((Math.random() * 99999) + 1);
-            $rootScope.contactModel.c_name = nameString;
+            $scope.setupEmptyModal();
+            $scope.contactModel.c_id = '';
+            $scope.contactModel.c_id = Math.floor((Math.random() * 99999) + 1);
+            $scope.contactModel.c_name = nameString;
         };
         $scope.editContact = function(contactId) {
             angular.forEach($scope.contactList, function(contact) {
