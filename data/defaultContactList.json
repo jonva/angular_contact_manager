@@ -1,7 +1,7 @@
 [{
     "c_id": "1000",
     "c_name": "Molly Weasley",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "molly88@gmail.com",
     "c_nickname": "Molly",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
@@ -9,31 +9,31 @@
 }, {
     "c_id": "1001",
     "c_name": "Hermione Granger",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "hermione.granger88@gmail.com",
     "c_nickname": "Hermione",
-    "c_company": "Misc",
+    "c_company": "Gryffindor",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1002",
     "c_name": "Minerva McGonagall",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "minerva@gmail.com",
     "c_nickname": "Minerva",
-    "c_company": "Misc",
+    "c_company": "Transfiguration",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1003",
     "c_name": "Sybill Trelawney",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "sybill@gmail.com",
     "c_nickname": "Sybill",
-    "c_company": "Misc",
+    "c_company": "Divination",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1004",
     "c_name": "Lilly Potter",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "lilpotter88@gmail.com",
     "c_nickname": "Lilly",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
@@ -41,7 +41,7 @@
 }, {
     "c_id": "1005",
     "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "chochang88@gmail.com",
     "c_nickname": "Cho",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
@@ -49,96 +49,72 @@
 }, {
     "c_id": "1006",
     "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_email": "ginny88@gmail.com",
     "c_nickname": "Ginny",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1007",
-    "c_name": "Lilly Potter",
-    "c_email": "nikhil.john.88@gmail.com",
+    "c_name": "James Potter",
+    "c_email": "jimpotter88@gmail.com",
     "c_nickname": "Lilly",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
-    "c_id": "1008",
-    "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Cho",
-    "c_company": "Misc",
-    "c_comments": "Lorem ipsum",
-    "c_img_url": ""
-}, {
     "c_id": "1009",
-    "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Ginny",
+    "c_name": "Ronald Weasley",
+    "c_email": "ronwon88@gmail.com",
+    "c_nickname": "Ron",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1010",
-    "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Cho",
+    "c_name": "Percival Weasley",
+    "c_email": "percyweasley88@gmail.com",
+    "c_nickname": "Percy",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
-}, {
-    "c_id": "1011",
-    "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Ginny",
-    "c_company": "Misc",
-    "c_comments": "Lorem ipsum",
-    "c_img_url": ""
-}, {
-    "c_id": "1012",
-    "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Cho",
-    "c_company": "Misc",
-    "c_comments": "Lorem ipsum",
-    "c_img_url": ""
-}, {
+} {
     "c_id": "1013",
-    "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Ginny",
+    "c_name": "Charles Weasley",
+    "c_email": "charliew@gmail.com",
+    "c_nickname": "Charlie",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1014",
-    "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Cho",
+    "c_name": "Arthur Weasley",
+    "c_email": "8artart8@gmail.com",
+    "c_nickname": "Arty",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1015",
-    "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Ginny",
+    "c_name": "Nyphadora Tonks",
+    "c_email": "tonks88@gmail.com",
+    "c_nickname": "Tonks",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1016",
-    "c_name": "Cho Chang",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Cho",
-    "c_company": "Misc",
+    "c_name": "Severus Snape",
+    "c_email": "hbp88@gmail.com",
+    "c_nickname": "Half-blood Prince",
+    "c_company": "Slytherin",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
 }, {
     "c_id": "1017",
-    "c_name": "Ginny Weasley-Potter",
-    "c_email": "nikhil.john.88@gmail.com",
-    "c_nickname": "Ginny",
+    "c_name": "Albus Dumbledore",
+    "c_email": "albdumbledore88@gmail.com",
+    "c_nickname": "Albus",
     "c_company": "Misc",
     "c_comments": "Lorem ipsum",
     "c_img_url": ""
