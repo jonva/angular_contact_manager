@@ -30,11 +30,7 @@ angular.module('contactManagerApp')
                 console.log("Did not receive Contact List " + JSON.stringify(reason.statusText));
             });
         };
-        if (angular.isUndefinedOrNull(localStorage.getItem('contactList'))) {
-            $scope.getContactListFromDefaultList();
-        } else {
-            $scope.contactList = JSON.parse(localStorage.getItem('contactList'));
-        }
+        
         $scope.generateImageUrl = function() {
             return 'images/dp-' + Math.floor((Math.random() * 3) + 1) + '.svg';
         };
@@ -49,13 +45,19 @@ angular.module('contactManagerApp')
             angular.forEach($scope.contactList, function(item, index) {
                 if (id === item.c_id) {
                     $scope.contactList.splice(index, 1);
+                    if ($scope.contactList.length === 0) {
+                        $scope.broadcastMessage("No contacts to show. Please add a new contact.", '', 1000000);
+                    } else {
+                        $scope.broadcastMessage(item.c_name + " deleted", '');
+                    }
                 }
             });
+
         };
         $scope.addContact = function(contactParamObject) {
             var exists = false;
             angular.forEach($scope.contactList, function(contact) {
-                if(contactParamObject.c_id === contact.c_id) {
+                if (contactParamObject.c_id === contact.c_id) {
                     exists = true;
                     angular.forEach(contactParamObject, function(value, key) {
                         contact[key] = value;
@@ -65,18 +67,18 @@ angular.module('contactManagerApp')
             });
             if (!exists) {
                 angular.forEach(contactParamObject, function(value, key) {
-                        $rootScope.contactModel[key] = value;
-                    });
-                
+                    $rootScope.contactModel[key] = value;
+                });
+
                 $scope.contactList.push(contactParamObject);
                 $scope.broadcastMessage("Contact " + contactParamObject.c_name + " added.");
             }
         };
-        $scope.setupEmptyModal = function(){
+        $scope.setupEmptyModal = function() {
             $scope.addSearchText = '';
             $rootScope.contactModel = CONSTANTS.CONTACT_MODEL;
         };
-        $scope.setupEditModal = function(nameString){
+        $scope.setupEditModal = function(nameString) {
             $rootScope.contactModel.c_id = '';
             $rootScope.contactModel.c_id = Math.floor((Math.random() * 99999) + 1);
             $rootScope.contactModel.c_name = nameString;
@@ -89,14 +91,25 @@ angular.module('contactManagerApp')
                     });
                 }
             });
-
         };
-        $scope.broadcastMessage = function(message, type){
-             $scope.message = message;
-             $scope.messageType = type;
-            $timeout(function(){
+        $scope.broadcastMessage = function(message, type, time) {
+            $scope.message = message;
+            $scope.messageType = type;
+            var timeValue = time;
+            if (isNaN(parseInt(timeValue, 10))) {
+                timeValue = 8000;
+            }
+            $timeout(function() {
                 $scope.message = '';
                 $scope.messageType = '';
-            }, 8000);
+            }, parseInt(timeValue, 10));
         };
+        if (angular.isUndefinedOrNull(localStorage.getItem('contactList'))) {
+            $scope.getContactListFromDefaultList();
+        } else {
+            $scope.contactList = JSON.parse(localStorage.getItem('contactList'));
+            if ($scope.contactList.length === 0) {
+                $scope.broadcastMessage("No contacts to show. Please add a new contact.", '', 1000000);
+            }
+        }
     });

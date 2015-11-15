@@ -1,0 +1,55 @@
+<div class="modal fade" id="editContactModel" role="dialog">
+    <div class="modal-dialog">
+        <article class="modal-content">
+            <div class="modal-body row">
+                <form name="editContactForm" novalidate>
+                    <div class="dpic-container col-sm-3 col-xs-12">
+                        <img ng-src="{{datasource.c_img_url}}" alt="{{datasource.c_name}}'s profile photo" class="dpic" title="{{datasource.c_name}}">
+                        <!-- <input type="file" name="c_profile_pic" id="field7" required="required"> -->
+                    </div>
+                    <div class="col-sm-9 col-xs-12 form-container">
+                        <div id="field1-container" class="row form-item-container">
+                            <div class="col-xs-12 ">
+                                <input type="text" class="form-control" name="c_name" id="field1" placeholder="Enter Full Name" required="required" ng-model="datasource.c_name">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </div>
+                        </div>
+                        <div id="field3-container" class="row form-item-container">
+                            <div class="col-xs-12">
+                                <i class="glyphicon glyphicon-user user-orig"></i>
+                                <i class="glyphicon glyphicon-user user-dupe"></i>
+                                <input type="email" name="c_email" id="field3" placeholder="Enter Email" required="required" ng-model="datasource.c_email">
+                            </div>
+                        </div>
+                        <div id="field4-container" class="row form-item-container">
+                            <div class="col-xs-12">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                                <input type="text" name="c_nickname" placeholder="Enter Nickname" id="field4" ng-model="datasource.c_nickname">
+                            </div>
+                        </div>
+                        <div id="field5-container" class="row form-item-container">
+                            <div class="col-xs-12">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                <input type="text" name="c_company" placeholder="Enter Company" id="field5" ng-model="datasource.c_company">
+                            </div>
+                        </div>
+                        <div id="field6-container" class="row form-item-container">
+                            <div class="col-xs-12">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                                <input type="text" name="c_comments" placeholder="Enter Comments" id="field6" ng-model="datasource.c_comments">
+                            </div>
+                        </div>
+                        <div id="form-submit" class="row clearfix form-controls-container">
+                            <div class="col-xs-12  col-sm-3 pull-right">
+                                <input type="submit" value="Submit" ng-disabled="editContactForm.$invalid" ng-click="addcontactfn(datasource)" data-dismiss="modal">
+                            </div>
+                            <div class="col-xs-12  col-sm-3 pull-right">
+                                <input type="reset" value="Cancel" data-dismiss="modal" ng-click="editContactForm.$rollbackViewValue();">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </article>
+    </div>
+</div>

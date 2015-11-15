@@ -15,33 +15,17 @@ angular
         'ui.bootstrap'
     ])
 
-    .config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
     angular.isUndefinedOrNull = function(val) {
-            return angular.isUndefined(val) || val === null;
-        };
+        return angular.isUndefined(val) || val === null;
+    };
     $stateProvider
-    
-        // route to show our basic form (/form)
+        //Home state that you get when you hit the app
         .state('home', {
             url: '/',
             templateUrl: 'views/home.html',
             controller: 'HomeController'
-        })
-        
-        // nested states 
-        // each of these sections will have their own view
-        // url will be nested (/form/profile)
-        .state('home.add', {
-            url: '/add',
-            templateUrl: 'views/home-add.html'
-        })
-        
-        // url will be /form/interests
-        .state('home.edit', {
-            url: '/edit',
-            templateUrl: 'views/home-edit.html'
         });
-        
     // catch all route
     // send users to the form page 
     $urlRouterProvider.otherwise('/');
