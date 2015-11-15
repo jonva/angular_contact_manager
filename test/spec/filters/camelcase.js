@@ -12,8 +12,7 @@ describe('Filter: camelCase', function () {
   }));
 
   it('should return the input prefixed with "camelCase filter:"', function () {
-    var text = 'angularjs';
-    expect(camelCase(text)).toBe('camelCase filter: ' + text);
+    expect(camelCase("abc")).toBe('Abc');
   });
 
 });
